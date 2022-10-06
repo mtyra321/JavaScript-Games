@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <script src="/game1/script.js"></script>
+    <title>RIP Flash Games | Checkers </title>
+
+</head>
+
+<body>
+
+    <header class="logo">
+        <!-- need to resize the img -->
+        <!-- <img src="/game-clipart-5.jpg.png" alt="Website banner"> -->
+        <h1>RIP Flash Games </h1>
+    </header>
+    
+    <div class="topbar">
+        <a href="../index.html">Home</a>
+        <a href="../game1/index.html">Checkers</a>
+        <a href="../game2/index.html">Chess</a>
+        <a href="../game3/index.html">Frogger</a>
+    </div>
+    <h1>Checkers</h1>
+
+    <section class="stats">
+        <h2>Game Statistics</h2>
+        <div class="wrapper"></div>
+        <div id="player1"></div>
+        <h3>Player 1 (Top)</h3>
+        <div id="player2"></div>
+        <h3>Player 2 (Bottom)</h3>
+    </section>
+
+    <div class="clearfix"></div>
+    <div class="turn"></div>
+    <span id="winner"></span>
+
+    <canvas id="checkersBoard" width="800" height="800" style="border:10px solid #D2691E"></canvas>
+
+    <button id="cleargame">Rest Game</button>
+
+    <section class="column">
+        <div id="board">
+            <div class="tiles"></div>
+            <div class="pieces">
+                <div class="player1pieces"></div>
+                <div class="player2pieces"></div>
+            </div>
+    </section>
+</body>
+
+</html>

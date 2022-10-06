@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+/* Global styles
+ --------------------------------------------------------*/
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/*Header
+----------------------------------------------------- */
+
+.logo {
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/*Nav
+----------------------------------------------------- */
+
+.topbar {
+    overflow: hidden;
+    background-color: rgb(212, 39, 30);
+}
+
+.topbar a {
+    float: left;
+    font-family: 'Calibri';
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 17px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    background-color: rgb(212, 100, 100);
+}
+
+a {
+    padding: 30px;
+}
+
+#games {
+    text-align: center;
+}
+
+
+/*body
+----------------------------------------------------- */
+
+body {
+    background-color: #173753;
+}
+
+
+/*foot
+----------------------------------------------------- */
+
+footer {
+    color: #ffffff;
+}

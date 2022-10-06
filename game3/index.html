@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIP Flash Games | Frogger </title>
+    <link rel="stylesheet" type="text/css" href="frogger.css">
+
+    <script src="frogger.js" type="module"></script>
+
+</head>
+
+<body>
+    <div class="topbar">
+        <a href="../index.html">Home</a>
+        <a href="../game1/index.html">Checkers</a>
+        <a href="../game2/index.html">Chess</a>
+        <a href="../game3/index.html">Frogger</a>
+    </div>
+    <H1 id="name">Frogger</H1>
+    <div class="grid-container">
+
+        <div class="grid-item score">
+            <p id="score">Score: </p>
+        </div>
+        <div class="grid-item lives">
+
+            <p id="lives">Lives: </p>
+        </div>
+        <div class="grid-item game">
+
+            <canvas width="800" height="800" id="canvas"></canvas>
+        </div>
+        <div class="grid-item high_scores">
+            <p id="highScoreLabel">High Scores</p>
+            <ul id="HighScores">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+.topbar {
+    overflow: hidden;
+    background-color: rgb(212, 39, 30);
+}
+
+.topbar a {
+    float: left;
+    font-family: 'Calibri';
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 17px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    background-color: rgb(212, 100, 100);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    width: 450px;
+    font-size: 40px;
+    /* change it to whatever you like */
+    position: relative;
+    /* these should be probably already set up by `reset.css` */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#highScoreLabel {
+    font-size: 40px;
+}
+
+ul:before,
+ul:after {
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+    border-bottom: 0;
+    width: 48%;
+}
+
+ul:before {
+    border-right: 0;
+}
+
+ul:after {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    margin-left: 1px;
+}
+
+li {
+    font-size: 40px;
+    text-align: left;
+    width: 48%;
+    float: left;
+    border: 1px solid black;
+    margin-bottom: -1px;
+}
+
+li:nth-child(even) {
+    margin-left: -1px;
+}
+
+canvas {
+    border: solid;
+    /* margin-left: 30%; */
+    background-color: rgb(75, 75, 77);
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    background-color: rgb(79, 92, 102);
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(52, 138, 85, 0.75);
+    text-align: center;
+    /* padding: 20px; */
+}
+
+#start {
+    background-color: rgb(255, 60, 0);
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 30px;
+}
+
+#score {
+    color: rgb(255, 94, 0);
+    font-size: 30px;
+}
+
+#lives {
+    color: rgb(255, 94, 0);
+    font-size: 30px;
+}
+
+.start {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.score {
+    padding: 3px;
+    grid-column: 1 / span 1;
+    grid-row: 2;
+}
+
+.lives {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+}
+
+.game {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.high_scores {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+
+#name {
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    height: 90px;
+    color: green;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 60px;
+    /* line-height: 40px; */
+    letter-spacing: 5px;
+    text-shadow: 4px 0 0 #1d0761;
+}

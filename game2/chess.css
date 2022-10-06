@@ -1,0 +1,102 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#turn {
+    max-width: 451px;
+    max-height: 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-style: inset;
+    text-align: center;
+    padding: 5px 0 0 0;
+    background: rgb(255, 255, 255);
+    transition: .85s linear;
+}
+
+.turnhighlight {
+    background: #5db95d !important;
+    color: rgb(255, 255, 255);
+}
+
+#game {
+    max-width: 504px;
+    max-height: 504px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 20px auto;
+}
+
+.cellprefix {
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+    margin: 3px;
+    padding: 15px 0 0 20px;
+}
+
+.gamecell {
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+    margin: 3px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 1px;
+    font-size: 30pt;
+    padding: 0 0 0 4px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gamecell:hover {
+    color: rgb(255, 255, 255);
+    background: rgba(111, 112, 114, 0.815);
+    z-index: 2;
+    transform: translate(10px, -10px);
+    animation: neonBlueText 1.5s ease-in-out infinite alternate;
+}
+
+.red {
+    background: rgba(201, 8, 8, 0.801);
+}
+
+.green {
+    background: rgba(38, 143, 47, 0.856) !important;
+}
+
+#reset {
+    text-align: center;
+    padding: 10px 7px 10px 7px;
+    margin-left: 47%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#reset:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(201, 8, 8, 0.966);
+}
