@@ -4,6 +4,6 @@ It consists of 3 games:
  <br> Chess made by Jason Kent
  <br> Checkers made by Alec Willits
  <br> Frogger made by Matt Tyra.
-  <br>
-This project used JavaScript to populate HTML Canvas tags.
+  <br><br>
+This project used JavaScript to populate HTML Canvas tags.<br>
   Created from September to December 2020.
