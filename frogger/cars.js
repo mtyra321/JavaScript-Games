@@ -1,19 +1,3 @@
-//
-/*
-
-
-
-
-
-
-
-
-
-
-*/
-
-
-//var cars;
 class Car {
     constructor(src, x, y, direction, speed, width, height) {
         this.src = src;
@@ -37,17 +21,12 @@ class Car {
             while (this.intersects(otherCar)) {
                 this.x -= 1;
             }
-            //   this.x = this.x - otherCar.x - 3;
         } else {
             while (otherCar.intersects(this)) {
                 otherCar.x -= 1;
             }
         }
-        //   console.log("x: " + this.x);
     }
 }
-
-
-
 
 export default Car;

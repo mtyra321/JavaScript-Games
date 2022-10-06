@@ -1,16 +1,3 @@
-/*
-
-
-
-
-
-
-
-
-*/
-
-
-
 class Character {
     constructor(image, x, y, lives, width, height) {
         this.startX = x;
@@ -24,7 +11,6 @@ class Character {
 
     }
     collision() {
-        //make splat noise
         this.x = this.startX;
         this.y = this.startY;
         this.lives--;
