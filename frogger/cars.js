@@ -9,22 +9,27 @@ class Car {
         this.height = height;
 
     }
+    //check if the hitboxes of two cars intersect
     intersects(character) {
         return !(character.x + 1 > (this.x + this.width) ||
             (character.x + character.width - 1) < this.x ||
             character.y + 1 > (this.y + this.height) ||
             (character.y + character.height - 1) < this.y);
     }
+    //if a cars intersect, the car behind will tailgate and change to the speed of car in front
     bumpCar(otherCar) {
         this.speed = otherCar.speed;
         if (this.x < otherCar.x) {
-            while (this.intersects(otherCar)) {
-                this.x -= 1;
-            }
+            this.x = otherCar.x + otherCar.width;
+            // while (this.intersects(otherCar)) {
+            //     this.x -= 1;
+            // }
         } else {
-            while (otherCar.intersects(this)) {
-                otherCar.x -= 1;
-            }
+            otherCar.x = this.x + this.width;
+
+            // while (otherCar.intersects(this)) {
+            //     otherCar.x -= 1;
+            // }
         }
     }
 }

@@ -34,6 +34,7 @@ if (x.complete) {
 
 
 function startGame() {
+    //set/clear all the variables
     starting = false;
     window.scrollTo(0, 200);
     gameGoing = true;
@@ -49,6 +50,7 @@ function startGame() {
     populateCars();
     animate();
 }
+
 document.getElementsByTagName("body")[0].addEventListener("keydown", function(e) {
     if (e.key === "ArrowUp" || e.key === "w") {
         e.preventDefault();
@@ -71,6 +73,7 @@ document.getElementsByTagName("body")[0].addEventListener("keydown", function(e)
     }
 });
 
+//resets the frog back to front
 function displayLives() {
     let life = new Image();
     life.src = "Pictures/frogger/frogger_forward.png";
@@ -116,6 +119,7 @@ function animateCars() {
             element.x -= element.speed;
         }
 
+        //if cars go off screen, put them back on screen
         if (element.x > 1000) {
             element.x = -100;
         }
@@ -141,8 +145,9 @@ function animate() {
         endGame();
         return;
     }
+
+    //character went forward off the screen
     if (character.y <= 0) {
-        //  console.log("change level");
         changeLevel();
         return;
     }
@@ -253,6 +258,7 @@ function addBackground() {
     let image = new Image();
 
     image.src = "Pictures/background/road.png";
+    //make a random amount of road
     for (let index = 0; index < Math.floor(Math.random() * 10) + 7; index++) {
         let y = Math.floor((Math.random() * 14) + 1) * 50;
         //  console.log("y is " + y);
@@ -260,12 +266,15 @@ function addBackground() {
         roadY.push(y);
         backgroundList.push(s);
     }
+    //make the two sidewalks
     let chum = new Image();
     chum.src = "Pictures/background/sidewalk.png";
     let s = new Background(chum, -10, 0, "Sidewalk", 820, 40);
     backgroundList.push(s);
     s = new Background(chum, -10, 760, "Sidewalk", 820, 40);
     backgroundList.push(s);
+
+
     let badIndex = checkIfArrayIsUnique(roadY);
 
     while (badIndex != -1) {
@@ -287,12 +296,13 @@ function populateCars() {
         const randomRoadYIndex = Math.floor(Math.random() * roadY.length);
         const randomElement = roadY[randomRoadYIndex];
         let speed = Math.floor(Math.random() * 7) + 3 + currentLevel;
-        //   console.log("speed" + speed);
         let direction = backgroundList[randomRoadYIndex].direction;
         if (direction == true) {
+            //cars going left to right
             carList.push(new Car("Pictures/cars/" + carSrc + "_left.png", Math.floor(Math.random() * 15) * 50, randomElement, direction, speed, 100, 50));
 
         } else {
+            //cars going right to left
             carList.push(new Car("Pictures/cars/" + carSrc + "_right.png", Math.floor(Math.random() * 15) * 50, randomElement, direction, speed, 100, 50));
 
         }
