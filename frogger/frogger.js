@@ -3,20 +3,15 @@ import Character from "./character.js";
 import Background from "./background.js";
 import { saveToLS, getFromLS } from './utilities.js';
 
-//var backgroundList = [];
-
 var canvas, ctx;
 var character;
 var score;
 var levelScore;
 var currentLevel;
-//var roadY = [];
-
 var characterImage = new Image();
 var gameGoing = false;
 var highScores = [], carList = [], roadY = [], backgroundList = [];
 var starting = true;
-// var carList = [];
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 highScores = loadScore("scores");

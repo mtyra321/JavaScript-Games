@@ -20,16 +20,9 @@ class Car {
     bumpCar(otherCar) {
         this.speed = otherCar.speed;
         if (this.x < otherCar.x) {
-            this.x = otherCar.x + otherCar.width;
-            // while (this.intersects(otherCar)) {
-            //     this.x -= 1;
-            // }
+            this.x = otherCar.x - otherCar.width;
         } else {
-            otherCar.x = this.x + this.width;
-
-            // while (otherCar.intersects(this)) {
-            //     otherCar.x -= 1;
-            // }
+            otherCar.x = this.x - this.width;
         }
     }
 }
