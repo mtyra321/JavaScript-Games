@@ -3,16 +3,18 @@ import Character from "./character.js";
 import Background from "./background.js";
 import { saveToLS, getFromLS } from './utilities.js';
 
-var backgroundList = [];
+//var backgroundList = [];
 
 var canvas, ctx;
 var character;
 var score;
 var levelScore;
 var currentLevel;
+//var roadY = [];
+
 var characterImage = new Image();
 var gameGoing = false;
-var highScores = [], carList = [];
+var highScores = [], carList = [], roadY = [], backgroundList = [];
 var starting = true;
 // var carList = [];
 canvas = document.getElementById("canvas");
@@ -39,7 +41,6 @@ function startGame() {
     window.scrollTo(0, 200);
     gameGoing = true;
     currentLevel = 1;
-    carList = [];
     backgroundList = [];
     roadY = [];
     score = 0;
@@ -158,7 +159,6 @@ function changeLevel() {
     character.y = 750;
     currentLevel++;
     levelScore = 0;
-    carList = [];
     backgroundList = [];
     roadY = [];
     addBackground();
@@ -238,6 +238,7 @@ function checkForCollisions() {
     }
 }
 
+//keep the frog within the boundaries
 function boundaries() {
     if (character.x >= 800) {
         character.x = 750;
@@ -252,7 +253,6 @@ function boundaries() {
         character.x = 0;
     }
 }
-var roadY = [];
 
 function addBackground() {
     let image = new Image();
@@ -266,6 +266,7 @@ function addBackground() {
         roadY.push(y);
         backgroundList.push(s);
     }
+
     //make the two sidewalks
     let chum = new Image();
     chum.src = "Pictures/background/sidewalk.png";
@@ -274,10 +275,11 @@ function addBackground() {
     s = new Background(chum, -10, 760, "Sidewalk", 820, 40);
     backgroundList.push(s);
 
-
+    // badIndex is the index of the first road that is duplicated
     let badIndex = checkIfArrayIsUnique(roadY);
 
     while (badIndex != -1) {
+        // removing duplicate roads
         backgroundList[badIndex].y = Math.floor((Math.random() * 14) + 1) * 50;
         roadY[badIndex] = backgroundList[badIndex].y;
         badIndex = checkIfArrayIsUnique(roadY);
