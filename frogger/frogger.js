@@ -12,9 +12,9 @@ var levelScore;
 var currentLevel;
 var characterImage = new Image();
 var gameGoing = false;
-var highScores = [];
+var highScores = [], carList = [];
 var starting = true;
-
+// var carList = [];
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 highScores = loadScore("scores");
